@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+        }
+        *{
+            font-family: Oswald, sans-serif;
+            color: rgb(20, 20, 20);
+            font-size: 25px;
+            text-align: center;
+        }
+        body{
+            background-color: rgb(7, 10, 20);
+            margin: 0;
+        }
+        h1{
+            font-size: 3rem;
+            color: rgb(214, 34, 34);
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+        h4{
+            font-weight: 100;
+            color: #FFF;
+            margin-top: 0;
+        }
+        p{
+            color: palegoldenrod;
+        }
+        div.insere{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        input, textarea{
+            border-radius: 5px;
+            box-shadow: 0px 0px 9px red;
+            border: none;
+        }
+        p{
+            padding: 0;
+            margin: 0;
+        }
+        input[type=submit]{
+            margin-top: 15px;
+
+        }
+        footer h4, h5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin: 0;
+            background-color: black;
+        }
+        footer{
+            position: sticky;
+            margin-bottom: 0;
+            margin-top: 40px;
+        }
+    </style>
+    <title>TODOds</title>
+</head>
+<body>
+    <div class="container">
+        <h1>TODOds</h1>
+        <hr style="width: 140px;">
+        <h4>O sistema que você pediu ao papai noel</h4>
+        <form action="" method="post">
+            <div class="insere">
+                <div class="dia">
+                    <p>DIA</p>
+                    <input type="text">
+                </div>
+                <div class="materia">
+                    <p>MATÉRIA</p>
+                    <input type="text">
+                </div>
+                <div class="descricao">
+                    <p>DESCRIÇÃO</p>
+                    <textarea type="text"></textarea>
+                </div>
+                <div class="urgencia">
+                    <p>URGÊNCIA</p>
+                    <input type="text">
+                </div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <h4>Desenvolvido pelo 2°DS</h4>
+        <h5>Todos direitos reservados &copy</h5>
+    </footer>
+</body>
+</html>
