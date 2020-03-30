@@ -3,14 +3,14 @@
 $host = "sql201.epizy.com";
 $user = "epiz_25058552";
 $pass = "zOpAv9fKPeOOpo";
-$banco = "epiz_25058552_devisate";
+$base = "epiz_25058552_devisate";
 
-$conexao = mysqli_connect ($host, $user, $pass) or die (mysqli_connect_error());
+$connection = mysqli_connect ($host, $user, $pass, $base) or die (mysqli_connect_error());
 
-if(isset($conexao)){
+if(isset($connection)){
     echo "DEU CERTO PARSA!";
 }
 
-mysqli_set_charset($conexao, "utf8");
+mysqli_set_charset($connection, "utf8");
 
 ?>
