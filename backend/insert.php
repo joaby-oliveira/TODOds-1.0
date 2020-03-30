@@ -15,11 +15,11 @@ VALUES
 '$status',
 '$FK_class');";
 
-if(mysqli_query($conn, $sql)){
+if(mysqli_query($conexao, $sql)){
     echo "EAE MANO KKKJ, FUNFOU PARSA";
 }else{
     echo "VISH MEU BOM, MOIÔ HEIN";
-    echo mysqli_error($conn);
+    echo mysqli_connect_error($conexao);
 }
 // echo $date;
 // echo $subject;
