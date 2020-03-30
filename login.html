@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu login</title>
+    <script src="https://kit.fontawesome.com/1dd3967cff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="frontend/login.css">
+</head>
+<body>
+    <div class="container">
+        <form action="backend/auth.php" method="POST">
+            <div class="box">
+                <i class="fas fa-user fa-7x"></i>
+                <div class="input-box">
+                    <div class="input input-email">
+                        <p>Email</p>
+                        <input type="text" id="email" name="user" placeholder="abc@email.com">
+                    </div>
+                    <div class="input input-password">
+                        <p>Senha</p>
+                        <input type="email" id="password" name="password" placeholder="******">
+                    </div>
+                    <div class="input input-submit">
+                        <input type="submit" id="submit" name="submit" placeholder="enviar">
+                    </div>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
