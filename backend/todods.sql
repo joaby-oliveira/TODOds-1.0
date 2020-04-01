@@ -20,9 +20,9 @@ CREATE TABLE users (
   lastname VARCHAR(25) NOT NULL,
   email VARCHAR(100) NOT NULL,
   password VARCHAR(32) NOT NULL, 
-  gender ENUM('M', 'F', 'O') NOT NULL,  
-  FK_class INT NOT NULL,
-  FOREIGN KEY (FK_class) REFERENCES class(classCode)
+  gender ENUM('M', 'F', 'O') NOT NULL  
+  -- FK_class INT NOT NULL,
+  -- FOREIGN KEY (FK_class) REFERENCES class(classCode)
 );
 
 
