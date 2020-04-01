@@ -1,21 +1,19 @@
 <?php
-function novaConexao($base, $server, $user, $password){
-    
-    session_start();
 
-    global $connect;
+$host = "localhost";
+$user = "root";
+$pass = "";
+$database = "todods";
 
-    try{
-        $connect = new PDO("mysql:host=$server;dbname=$base", $user, $password);
-        echo "DEU CERTO";
-    
-    }catch(PDOException $e){
-        echo "Erro: " . $e->getMessage();
-    
-    }
-    
-    return $connect;   
+global $connect;
+
+try{
+    $connect = new PDO("mysql:dbname-".$database."; host-".$host, $user, $pass);
+    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+}catch(PDOException $error){
+    echo "ERROR: ".$error->getMessage();
+    exit;
 }
-$conexao = novaConexao("cursophp", "localhost", "root", "");
 
 ?>
