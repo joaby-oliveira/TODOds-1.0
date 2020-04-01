@@ -1,29 +1,27 @@
 <?php
-require_once('connect.php');
-echo "<br>";
-$date = $_POST["day"];
-$subject = $_POST["subject"];
-$description = $_POST["description"];
-$status = $_POST["status"];
-$FK_class = $_POST["FK_class"];
+<?php 
+require_once "conexao_pdo.php";
 
-$sql = "INSERT INTO events (date, subject, description, status, photo, FK_class)
-VALUES
-('$date',
-'$subject',
-'$description',
-'$status',
-'$FK_class');";
+$dia = $_POST["dia"];
+$materia = $_POST["materia"];
+$descricao = $_POST["descricao"];
+$urgencia = $_POST["urgencia"];
 
-if(mysqli_query($conexao, $sql)){
-    echo "EAE MANO KKKJ, FUNFOU PARSA";
+$sql = "INSERT INTO events (date, subject, description, status, FK_class)
+VALUES(
+    '$dia', 
+    '$materia', 
+    '$descricao', 
+    '$urgencia', 
+    1
+)";
+
+$conexao = novaConexao("cursophp", "localhost", "root", "");
+print_r(get_class_methods($conexao));
+if($conexao->exec($sql)){
+    $id = $conexao->lastInsertId();
+    echo "Novo cadastro com id $id <br>";
 }else{
-    echo "VISH MEU BOM, MOIÔ HEIN";
-    echo mysqli_connect_error($conexao);
+    echo $conexao->errorCode() . "<br>";
+    print_r($conexao->errorInfo());
 }
-// echo $date;
-// echo $subject;
-// echo $description;
-// echo $status;
-// echo $FK_class;
-// echo $sql;
