@@ -1,4 +1,3 @@
-<?php
 <?php 
 require_once "conexao_pdo.php";
 

@@ -1,0 +1,95 @@
+*{
+    font-family: 'Oswald', sans-serif;
+}
+body{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(180deg, #101B3F 0%, #A31831 100%);
+    background-repeat: no-repeat;
+    backdrop-filter: blur(4px);
+}
+section.superior{
+    background-image: url("../fotos/jooj.svg");
+    height: 220px;
+
+}
+div.superior-filha{
+    display: flex;
+    align-items: center;
+}
+img#logo{
+    width: 165px;
+}
+img#background{
+    width: 165px;
+}
+h1{
+    font-size: 24px;
+    color: #C14C4C;
+}
+h2{
+    font-size: 16px;
+    font-weight: 100;
+    color: #FFFFFF;
+    margin: 0;
+}
+div.cabecalho{
+    width: 190px;
+    top: 40px;
+    right: 20px;
+    display: inline-block;
+}
+div.meio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.box{
+    width: 282px;
+    height: 84px;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0, 0, 0, 42%);
+}
+div.subtitulo{
+    display: inline-block;
+    width: 190px;
+    height: 50px;
+}
+div.inferior{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+a#login{
+    margin: 10px;
+    display: block;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #223162;
+    box-shadow: 0 0 10px black;
+}
+a#login p{
+    margin: 0;
+}
+h3{
+    margin: 0;
+    font-weight: 100;
+    color: #FFFCFC;
+}
+h4{
+    margin: 0;
+    color: #4E70E1;
+}

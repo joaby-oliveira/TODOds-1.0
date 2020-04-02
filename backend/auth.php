@@ -1,29 +1,23 @@
-<?php 
-
-if(isset($_POST['user']) && !empty($_POST['user']) && isset($_POST['password']) && !empty($_POST['password'])) {
-
-    require 'connect.php';
-    require 'userClass.php';
-
-    $object = new user;
-
-    $email = addslashes($_POST['user']);
-    $password = addslashes($_POST['password']);    
-
-    if ($object->login($email, $password) == true){
-        if(isset($_SESSION['userID'])){
-            header("Location:../index.html");
-        }else{
-            header("Location:../login.html");    
-        }
-    }else{
-        header("Location:../login.html");
+<?php
+include_once 'connect.php';
+session_start();
+if(isset($_POST['submit'])){
+    $email = $_POST['user'];
+    $password = $_POST['password'];
+    $sql = "SELECT email FROM users WHERE email = '$email'";
+    $resultado = mysqli_query($connection, $sql);
+    // se achar algum usuário
+    if(mysqli_num_rows($resultado) > 0){
+        print_r($resultado);
     }
-
-}else {   
-    header("Location:../login.html");
+    // se não achar algum usuário
+    else{
+        $erros = array();
+        $erros[] = 'CONSERTA AI PARSA';
+        foreach ($erros as $erro) {
+            echo $erro;
+        }
+        header ('Location: ../login.php');
+    }
 }
-
-
-
 ?>

@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <form name="form" action="backend/auth.php" method="POST">
+        <form id="form" name="form" action="backend/auth.php" method="POST">
             <div class="box">
                 <i class="fas fa-user fa-7x"></i>
                 <div class="input-box">
@@ -24,7 +24,11 @@
                     <div class="input input-submit">
                         <input onclick="" type="submit" id="submit" name="submit" value="Enviar">
                     </div>
-                    <div style="text-align:center" id="error"></div>
+                    <div style="text-align:center" id="error">
+                        <?php include_once('backend/auth.php'); foreach($erros as $erro): ?>
+                            <p><?=$erro?></p>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
         </form>

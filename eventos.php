@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(!$_SESSION['userCode']){
+    echo 
+    "<script>
+            alert('Você não tem permissão a esta página');
+        
+        window.location.href = 'index.php';
+    </script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,6 +129,7 @@
     <div class="container">
         <header>
             <h1>TODOds</h1>
+            <h2><?php echo "Seja bem-vindo " . $_SESSION['firstname']; ?></h2>
             <hr style="width: 140px;">
             <h4>O sistema que você pediu ao papai noel</h4>
         </header>
@@ -180,6 +192,9 @@
 
             </tbody>
         </table>
+        <a href="backend/apagaAgora/logout.php">
+            Sair
+        </a>
     </div>
 </body>
 </html>
