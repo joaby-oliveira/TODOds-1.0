@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once 'backend/connect.php';
 $dia = $_POST["dia"];
 $materia = $_POST["materia"];
@@ -11,13 +12,11 @@ VALUES(
     '$materia', 
     '$descricao', 
     '$urgencia', 
-    1
+    '$classCode'
 )";
-
-if($conexao->exec($sql)){
-    $id = $conexao->lastInsertId();
-    echo "Novo cadastro com id $id <br>";
-
+$result = mysqli_query($connection, $sql);
+if($result){
+    echo "deu certo";
 }else{
     echo $conexao->errorCode() . "<br>";
     print_r($conexao->errorInfo());

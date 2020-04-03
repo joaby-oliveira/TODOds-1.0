@@ -8,14 +8,14 @@ if(isset($_POST['submit'])){
     $email = $_POST['user'];
     $password = $_POST['password'];
     $sql = "SELECT email FROM users WHERE email = '$email'";
-    $resultado = mysqli_query($connection, $sql);
+    $result = mysqli_query($connection, $sql);
     
     //Caso achar um usuário
-    if(mysqli_num_rows($resultado) > 0){
+    if(mysqli_num_rows($result) > 0){
         $sql = "SELECT * FROM users WHERE email = '$email' and password = '$password';";
-        $resultado = mysqli_query($connection, $sql);
-        if(mysqli_num_rows($resultado) == 1){
-            $dados = mysqli_fetch_assoc($resultado);
+        $result = mysqli_query($connection, $sql);
+        if(mysqli_num_rows($result) == 1){
+            $dados = mysqli_fetch_assoc($result);
             $_SESSION['userCode'] = $dados['userCode'];
             $userCode =&$_SESSION['userCode'];
             
@@ -33,7 +33,11 @@ if(isset($_POST['submit'])){
             
             $_SESSION['gender'] = $dados['gender'];
             $gender =&$_SESSION['gender'];
+
+            $_SESSION['classCode'] = $dados['classCode'];
+            $classCode =&$_SESSION['classCode'];
             // Array ( [userCode] => 1 [firstname] => jojo [lastname] => ooj [email] => big@gmail.com [password] => toto123 [gender] => M )
+            print_r($_SESSION);
             header('Location: ../events.php');
             
         }
