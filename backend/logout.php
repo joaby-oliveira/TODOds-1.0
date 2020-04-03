@@ -8,4 +8,6 @@ session_unset();
 //Destroi a sessão
 session_destroy();
 
+// Encaminha para o arquivo de login
+header('Location:../login.php');
 ?>

@@ -19,19 +19,19 @@
         </section>
         <div class="meio">
             <div class="box">
-                <img src="fotos/lua.svg" alt="lua">
+                <img src="photos/lua.svg" alt="lua">
                 <div class="subtitulo">
                     <h2>Acesse suas tarefas de qualquer lugar</h2>
                 </div>
             </div>
             <div class="box">
-                <img src="fotos/celular.svg" alt="lua">
+                <img src="photos/celular.svg" alt="lua">
                 <div class="subtitulo">
                     <h2>Controle suas dependências da palma da sua mão</h2>
                 </div>
             </div>
             <div class="box">
-                <img src="fotos/checklist.svg" alt="lua">
+                <img src="photos/checklist.svg" alt="lua">
                 <div class="subtitulo">
                     <h2>Tenha mais controle de seus afazeres</h2>
                 </div>

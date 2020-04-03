@@ -1,5 +1,4 @@
 <?php
-
 function newConnection($server, $user, $password, $database){
     $connection = mysqli_connect ($server, $user, $password, $database);
     

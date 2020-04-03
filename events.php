@@ -192,7 +192,7 @@ if(!$_SESSION['userCode']){
 
             </tbody>
         </table>
-        <a href="backend/apagaAgora/logout.php">
+        <a href="backend/logout.php">
             Sair
         </a>
     </div>

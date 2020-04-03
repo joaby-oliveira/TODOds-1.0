@@ -1,7 +1,5 @@
 <?php 
-
-require_once "conexao_pdo.php";
-
+include_once 'backend/connect.php';
 $dia = $_POST["dia"];
 $materia = $_POST["materia"];
 $descricao = $_POST["descricao"];
@@ -15,9 +13,6 @@ VALUES(
     '$urgencia', 
     1
 )";
-
-$conexao = newConnection("todods", "localhost", "root", "");
-print_r(get_class_methods($conexao));
 
 if($conexao->exec($sql)){
     $id = $conexao->lastInsertId();
