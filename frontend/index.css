@@ -9,12 +9,12 @@ body{
     background-repeat: no-repeat;
     backdrop-filter: blur(4px);
 }
-section.superior{
-    background-image: url("../fotos/jooj.svg");
+section.top{
+    background-image: url("../photos/jooj.svg");
     height: 220px;
 
 }
-div.superior-filha{
+div.top-bg{
     display: flex;
     align-items: center;
 }
@@ -34,13 +34,13 @@ h2{
     color: #FFFFFF;
     margin: 0;
 }
-div.cabecalho{
+div.header{
     width: 190px;
     top: 40px;
     right: 20px;
     display: inline-block;
 }
-div.meio{
+div.middle{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,12 +55,12 @@ div.box{
     align-items: center;
     background: rgba(0, 0, 0, 42%);
 }
-div.subtitulo{
+div.subtitle{
     display: inline-block;
     width: 190px;
     height: 50px;
 }
-div.inferior{
+div.bottom{
     display: flex;
     flex-direction: column;
     justify-content: center;

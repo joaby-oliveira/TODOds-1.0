@@ -9,35 +9,35 @@
 </head>
 <body>
     <div class="container">
-        <section class="superior">
-            <div class="superior-filha">
-                <img id="logo" src="photos/TODOds-transparente.png" alt="logo do site">
-                <div class="cabecalho">
+        <section class="top">
+            <div class="top-bg">
+                <img id="logo" src="photos/TODOds-transparente.png" alt="site logo">
+                <div class="header">
                     <h1>O sistema que você pediu ao papai noel</h1>
                 </div>
             </div>
         </section>
-        <div class="meio">
+        <div class="middle">
             <div class="box">
-                <img src="photos/lua.svg" alt="lua">
-                <div class="subtitulo">
+                <img src="photos/lua.svg" alt="moon">
+                <div class="subtitle">
                     <h2>Acesse suas tarefas de qualquer lugar</h2>
                 </div>
             </div>
             <div class="box">
-                <img src="photos/celular.svg" alt="lua">
-                <div class="subtitulo">
+                <img src="photos/celular.svg" alt="cell">
+                <div class="subtitle">
                     <h2>Controle suas dependências da palma da sua mão</h2>
                 </div>
             </div>
             <div class="box">
-                <img src="photos/checklist.svg" alt="lua">
-                <div class="subtitulo">
+                <img src="photos/checklist.svg" alt="checklist">
+                <div class="subtitle">
                     <h2>Tenha mais controle de seus afazeres</h2>
                 </div>
             </div>
         </div>
-        <div class="inferior">
+        <div class="bottom">
             <a href="login.php" id="login">
                 <p>Logar</p>
             </a>
