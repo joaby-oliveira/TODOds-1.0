@@ -3,7 +3,7 @@
 include_once 'connect.php';
 
 $email = $_POST['email'];
-$pass = $_POST['password'];
+$pass = MD5($_POST['password']);
 $firstname = $_POST['first'];
 $lastname = $_POST['last'];
 $gender = $_POST['gender'];
