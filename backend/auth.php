@@ -8,7 +8,31 @@ if(isset($_POST['submit'])){
     $resultado = mysqli_query($connection, $sql);
     // se achar algum usuário
     if(mysqli_num_rows($resultado) > 0){
-        print_r($resultado);
+        $sql = "SELECT * FROM users WHERE email = '$email' and password = '$password';";
+        $resultado = mysqli_query($connection, $sql);
+        if(mysqli_num_rows($resultado) == 1){
+            $dados = mysqli_fetch_assoc($resultado);
+            $_SESSION['userCode'] = $dados['userCode'];
+            $userCode =&$_SESSION['userCode'];
+            
+            $_SESSION['firstname'] = $dados['firstname'];
+            $firstname =&$_SESSION['firstname'];
+            
+            $_SESSION['lastname'] = $dados['lastname'];
+            $lastname =&$_SESSION['lastname'];
+            
+            $_SESSION['email'] = $dados['email'];
+            $email =&$_SESSION['email'];
+            
+            $_SESSION['password'] = $dados['password'];
+            $password =&$_SESSION['password'];
+            
+            $_SESSION['gender'] = $dados['gender'];
+            $gender =&$_SESSION['gender'];
+            // Array ( [userCode] => 1 [firstname] => jojo [lastname] => ooj [email] => big@gmail.com [password] => toto123 [gender] => M )
+            header('Location: ../eventos.php');
+            
+        }
     }
     // se não achar algum usuário
     else{

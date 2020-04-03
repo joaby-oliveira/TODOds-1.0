@@ -25,9 +25,6 @@
                         <input onclick="" type="submit" id="submit" name="submit" value="Enviar">
                     </div>
                     <div style="text-align:center" id="error">
-                        <?php include_once('backend/auth.php'); foreach($erros as $erro): ?>
-                            <p><?=$erro?></p>
-                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
