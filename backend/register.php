@@ -11,11 +11,11 @@ $class = 1;
 
 $query = "SELECT email FROM users WHERE email = '$email'";
 $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
-print_r($result);
+
 if(mysqli_num_rows($result) == 0){
     $query = "INSERT INTO users(firstname, lastname, email, password, gender, classCode)
     VALUES('$firstname', '$lastname', '$email', '$pass', '$gender', $class)";
-    $resultado = mysqli_query($connection, $query);
+    $result = mysqli_query($connection, $query);
 }else{
     echo "Erro: " . mysqli_connect_error();
 }

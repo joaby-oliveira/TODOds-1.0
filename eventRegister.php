@@ -1,4 +1,4 @@
-<form action="backend/register.php" mathod="post">
+<form action="backend/register.php" method="POST">
 <input type="text" name="first" placeholder="firstname">
 <input type="text" name="last" placeholder="lastname">
 <input type="text" name="email" placeholder="email">
