@@ -6,7 +6,7 @@ session_start();
 
 if(isset($_POST['submit'])){
     $email = $_POST['user'];
-    $password = $_POST['password'];
+    $password = MD5($_POST['password']);
     $sql = "SELECT email FROM users WHERE email = '$email'";
     $result = mysqli_query($connection, $sql);
     // $result - $connection->query($sql);
