@@ -9,6 +9,13 @@ $lastname = $_POST['last'];
 $gender = $_POST['gender'];
 $class = 1;
 
+echo $email . "<br>";
+echo $pass . "<br>";
+echo $firstname . "<br>";
+echo $lastname . "<br>";
+echo $gender . "<br>";
+echo $class . "<br>";
+
 $query = "SELECT email FROM users WHERE email = '$email'";
 $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
 
