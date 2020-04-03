@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
             $gender =&$_SESSION['gender'];
 
             $_SESSION['classCode'] = $dados['classCode'];
-            $classCode =&$_SESSION['classCode'];
+            $classCodeUser =&$_SESSION['classCode'];
             // Array ( [userCode] => 1 [firstname] => jojo [lastname] => ooj [email] => big@gmail.com [password] => toto123 [gender] => M )
             print_r($_SESSION);
             header('Location: ../events.php');
