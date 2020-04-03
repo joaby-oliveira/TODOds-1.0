@@ -15,6 +15,7 @@ if(mysqli_num_rows($result) == 0){
     $query = "INSERT INTO users(firstname, lastname, email, password, gender, classCode)
     VALUES('$firstname', '$lastname', '$email', '$pass', '$gender', '$class')";
     $result = mysqli_query($connection, $query);
+    header ("Location: ../login.php");
 }else{
     echo "Erro: " . mysqli_connect_error();
 }

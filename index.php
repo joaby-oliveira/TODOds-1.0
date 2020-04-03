@@ -11,7 +11,7 @@
     <div class="container">
         <section class="superior">
             <div class="superior-filha">
-                <img id="logo" src="fotos/TODOds-transparente.png" alt="logo do site">
+                <img id="logo" src="photos/TODOds-transparente.png" alt="logo do site">
                 <div class="cabecalho">
                     <h1>O sistema que você pediu ao papai noel</h1>
                 </div>
