@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS events (
   description TEXT NOT NULL,
   status ENUM('0', '1'),
   classCode INT UNSIGNED NOT NULL,
-  turma set('A', 'B', 'AB'),
+  team set('A', 'B', 'AB'),
   CONSTRAINT FK_classCode FOREIGN KEY (classCode) REFERENCES class(classCode)
 );
 
