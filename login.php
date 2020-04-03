@@ -15,7 +15,7 @@
                 <div class="input-box">
                     <div class="input input-email">
                         <p>Email</p>
-                        <input type="email" id="email" name="user" placeholder="usuario@email.com">
+                        <input type="email" id="email" name="email" placeholder="abc@email.com">
                     </div>
                     <div class="input input-password">
                         <p>Senha</p>
@@ -50,7 +50,7 @@
                 inPassword.style.borderBottom = "2px solid red";
             }
 
-            if(inPassword.value.length < 6 && inPassword.value.length > 0){
+            if(inPassword.value.length < 8 && inPassword.value.length > 0){
                 messages.push("A senha é muito curta");
                 inPassword.style.borderBottom = "2px solid red";
             }
@@ -66,10 +66,10 @@
             }
 
             if(messages.length > 0){
-                console.log('chegou, fica na auth.php');
+                console.log('Logado com sucesso!');
                 e.preventDefault();
                 errorElement.innerText = messages.join('\n ');
-                alert("Calma la amigão, c fez merda");
+                alert("Erro de login");
             } 
 
         });

@@ -1,5 +1,7 @@
 <?php
+
 session_start();
+
 if(!$_SESSION['userCode']){
     echo 
     "<script>
@@ -8,7 +10,9 @@ if(!$_SESSION['userCode']){
         window.location.href = 'index.php';
     </script>";
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +27,7 @@ if(!$_SESSION['userCode']){
             h1{
                 font-size: 3rem !important;
             }
-            .descricao{
+            .desc{
                 font-weight: 100;
                 font-size: 0.6rem !important;
             }
@@ -49,7 +53,7 @@ if(!$_SESSION['userCode']){
             padding: 10px;
             overflow: scroll;
         }
-        .tabela{
+        .tab{
             border-radius: 5px;
         }
         th{
@@ -88,14 +92,14 @@ if(!$_SESSION['userCode']){
             word-wrap: break-word;
             transition: ease-in-out 0.6s;
         }
-        td.descricao{
+        td.desc{
             font-size: 0.6rem;
         }
-        .necessario{
+        .necessary{
             color: black;
             background-color: rgb(230, 182, 50) !important;
         }
-        .naonecessario{
+        .unnecessary{
             background-color: rgb(77, 216, 84) !important;
             color: black;
         }
@@ -111,7 +115,7 @@ if(!$_SESSION['userCode']){
         a img:hover{
             transform: scale(1.1);
         }
-        .descricao{
+        .desc{
             font-size: 1rem !important;
         }
         td:hover{
@@ -133,7 +137,7 @@ if(!$_SESSION['userCode']){
             <hr style="width: 140px;">
             <h4>O sistema que você pediu ao papai noel</h4>
         </header>
-        <table class="tabela">
+        <table class="tab">
             <caption>TABELA DE AULAS</caption>
             <thead>
                 <tr>
@@ -147,45 +151,45 @@ if(!$_SESSION['userCode']){
             <tbody>
                 <tr class="p">
                     <td>09/03 <br> Segunda</td>
-                    <td>Matematica</td>
-                    <td class="descricao">Tarefa de Matemática sobre sistemas lineares</td>
-                    <td class="necessario">NECESSARIO!</td>
+                    <td>Matemática</td>
+                    <td class="desc">Tarefa de Matemática sobre sistemas lineares</td>
+                    <td class="necessary">NECESSÁRIO!</td>
                     <td> 
                         <a href="fotos/math1.jpg">
-                            <img src="fotos/math1.jpg" alt="foto da tarefa de matemática" style="width:50%">
+                            <img src="fotos/math1.jpg" alt="photo homework" style="width:50%">
                         </a>
                     </td>
                 </tr>
                 <tr>
                     <td>09/03 <br> Segunda</td>
-                    <td>Etica</td>
-                    <td class="descricao">Fazer o trabalho sobre etica na area da informatica</td>
-                    <td class="necessario">NECESSARIO!</td>
+                    <td>Ética</td>
+                    <td class="desc">Fazer o trabalho sobre ética na área da informática</td>
+                    <td class="necessary">NECESSÁRIO!</td>
                     <td> 
-                        <a href="fotos/default.png">
-                            <img src="fotos/default.png" alt="foto default" style="width:50%">
+                        <a href="photo/default.png">
+                            <img src="photo/default.png" alt="default photo" style="width:50%">
                         </a>
                     </td>
                 </tr>
                 <tr class="p">
                     <td>13/03 <br> Sexta</td>
-                    <td>Matematica</td>
-                    <td class="descricao">Prova de matematica - Determinante, matrizes, sistemas lineares...</td>
-                    <td class="naonecessario">NAO NECESSARIO</td>
+                    <td>Matemática</td>
+                    <td class="desc">Prova de matemática - Determinante, matrizes, sistemas lineares...</td>
+                    <td class="unnecessary">NÃO NECESSÁRIO!</td>
                     <td>
-                        <a href="fotos/default.png">
-                            <img src="fotos/default.png" alt="foto sem conteudo" style="width:50%">
+                        <a href="photo/default.png">
+                            <img src="photo/default.png" alt="default photo" style="width:50%">
                         </a>
                     </td>
                 </tr>    
                 <tr>
                     <td>16/03 <br> Segunda</td>
                     <td>Lingua Portuguesa</td>
-                    <td class="descricao">Redaçao de Lingua Portuguesa - Fazer tambem a pesquisa norteadora sobre a vacinaçao.</td>
-                    <td class="necessario">NECESSARIO!</td>
+                    <td class="desc">Redação de Língua Portuguesa - Fazer também a pesquisa norteadora sobre a vacinação.</td>
+                    <td class="necessary">NECESSÁRIO!</td>
                     <td>
-                        <a href="fotos/math1.jpg">
-                            <img src="fotos/default.png" alt="foto da tarefa de matemática" style="width:50%">
+                        <a href="photos/math1.jpg">
+                            <img src="photos/default.png" alt="default photo style="width:50%">
                         </a>
                     </td>
                 </tr>    

@@ -36,7 +36,7 @@
         p{
             color: palegoldenrod;
         }
-        div.insere{
+        div.insert{
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -164,37 +164,29 @@
         <hr style="width: 140px;">
         <h4>O sistema que você pediu ao papai noel</h4>
         <form action="backend/insert.php" method="post">
-            <div class="insere">
-                <div class="dia">
+            <div class="insert">
+                <div class="day">
                     <p>DATA</p>
                     <input type="text" name="date">
                 </div>
-                <div class="materia">
+                <div class="subject">
                     <p>MATÉRIA</p>
                     <input type="text" name="subject">
                 </div>
-                <div class="descricao">
+                <div class="desc">
                     <p>DESCRIÇÃO</p>
                     <textarea type="text" name="description"></textarea>
                 </div>
-                <div class="urgencia">
+                <div class="urgency">
                     <p>URGENTE?</p>
-                    <input type="text" name="status">
-                </div>
-                <div class="urgencia">
-                    <p>Fotos</p>
-                    <input style="width:300px" type="file" name="status">
-                </div>
-                <div class="turma">
-                    <p>Turma</p>
-                    <input type="text" name="team">
+                    <input type="text" name="urgency">
                 </div>
                 <input type="submit" value="Enviar">
             </div>
         </form>
     </div>
     <footer>
-        <h4>Desenvolvido pelo 2°DS</h4>
+        <h4>Desenvolvido por <a href="https://github.com/joaby-oliveira">Joaby Oliveira</a> e <a href="https://github.com/GabrielRagonhaRodrigues">Gabriel Rodrigues</a></h4>
         <h5>Todos direitos reservados &copy</h5>
     </footer>
 </body>
