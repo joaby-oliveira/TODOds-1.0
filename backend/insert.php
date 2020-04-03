@@ -16,7 +16,7 @@ VALUES(
     1
 )";
 
-$conexao = newConnection("cursophp", "localhost", "root", "");
+$conexao = newConnection("todods", "localhost", "root", "");
 print_r(get_class_methods($conexao));
 
 if($conexao->exec($sql)){

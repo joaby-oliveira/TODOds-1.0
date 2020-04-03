@@ -9,7 +9,6 @@ function newConnection($server, $user, $password, $database){
     
     return $connection;
 }
-
-$connection = newConnection("localhost", "root", "", "cursophp");
-
+$connection = newConnection("localhost", "root", "", "todods");
+// print_r($connection);
 ?>
