@@ -25,6 +25,10 @@
                         <input onclick="" type="submit" id="submit" name="submit" value="Enviar">
                     </div>
                     <div style="text-align:center" id="error">
+                        <?php session_start(); ?>
+                        <?php if ($_SESSION['errors']):?>
+                            <?php print_r($_SESSION['errors']); ?>
+                        <?php endif ?>
                     </div>
                 </div>
             </div>
@@ -35,7 +39,10 @@
         const inPassword = document.getElementById("password");
         const errorElement = document.getElementById("error");
         
-        form.addEventListener('submit', (e)=>{
+        // document.getElementById('form').submit();
+        form.addEventListener('submit', e => {
+            // e.preventDefault();
+
             let messages = [];
 
             if(inPassword.value == ""){
@@ -59,10 +66,12 @@
             }
 
             if(messages.length > 0){
+                console.log('chegou, fica na auth.php');
                 e.preventDefault();
                 errorElement.innerText = messages.join('\n ');
                 alert("Calma la amigão, c fez merda");
-            }
+            } 
+
         });
 
         function validatePassword(password) {
