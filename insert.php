@@ -181,6 +181,10 @@
                     <p>URGENTE?</p>
                     <input type="text" name="urgency">
                 </div>
+                <div class="photo">
+                    <p>Foto</p>
+                    <input style="width:110px" type="file" name="file">
+                </div>
                 <input type="submit" value="Enviar">
             </div>
         </form>
