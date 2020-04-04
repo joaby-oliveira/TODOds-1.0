@@ -26,7 +26,7 @@
                     </div>
                     <div style="text-align:center" id="error">
                         <?php session_start(); ?>
-                        <?php if ($_SESSION['errors']):?>
+                        <?php if (isset($_SESSION['errors'])):?>
                             <?php print_r($_SESSION['errors']); ?>
                         <?php endif ?>
                     </div>
@@ -78,6 +78,8 @@
             const regex = /(?=(?:.*?[A-Z]){1})(?=(?:.*?[0-9]){1})(?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})/;
             return regex.test(password);
         }
+
+        console.log(validatePassword(inPassword););
 
     </script>
 </body>
