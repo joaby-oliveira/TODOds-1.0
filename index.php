@@ -42,7 +42,7 @@
                 <p>Logar</p>
             </a>
             <h3>Ainda não tem uma conta?</h3>
-            <h4><a href="eventRegister.php">Criar uma</a></h4>
+            <h4><a href="register.php">Criar uma</a></h4>
         </div>
     </div>
 </body>
