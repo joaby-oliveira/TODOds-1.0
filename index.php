@@ -2,21 +2,15 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1dd3967cff.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="frontend/index.css">
     <title>TODOds</title>
 </head>
 <body>
+    <img id="logo" src="photos/TODOds-transparente.png" alt="site logo">
     <div class="container">
-        <section class="top">
-            <div class="top-bg">
-                <img id="logo" src="photos/TODOds-transparente.png" alt="site logo">
-                <div class="header">
-                    <h1>O sistema que você pediu ao papai noel</h1>
-                </div>
-            </div>
-        </section>
         <div class="middle">
             <div class="box">
                 <img src="photos/lua.svg" alt="moon">
@@ -45,5 +39,24 @@
             <h4><a href="register.php">Criar uma</a></h4>
         </div>
     </div>
+    <nav class="img-txt">
+        <ul>
+            <a href="">
+                <li>
+                    <i class="fas fa-book fa-2x"></i>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <i class="fas fa-home fa-2x"></i>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <i class="fas fa-address-card fa-2x"></i>
+                </li>
+            </a>
+        </ul>
+    </nav>
 </body>
 </html>

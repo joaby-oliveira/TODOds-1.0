@@ -27,7 +27,7 @@
                     <div style="text-align:center" id="error">
                         <?php session_start(); ?>
                         <?php if (isset($_SESSION['errors'])):?>
-                            <?php print_r($_SESSION['errors']); ?>
+                            <?php print_r($_SESSION['errors']);?>
                         <?php endif ?>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
             return regex.test(password);
         }
 
-        console.log(validatePassword(inPassword););
+        console.log(validatePassword(inPassword));
 
     </script>
 </body>
