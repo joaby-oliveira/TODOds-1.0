@@ -78,13 +78,14 @@ i {
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    width: 100%;
+    width: 75%;
     opacity: 0.9;
     outline: none;
+    transition: 0.2s;
 }
 
 .submit-btn:hover {
-    box-shadow: 0 0 8px #101B3F;
+    transform: scale(1.1);
     opacity: 1;
 }
 
