@@ -24,6 +24,9 @@
                     <div class="input input-submit">
                         <input onclick="" type="submit" id="submit" name="submit" value="Enviar">
                     </div>
+                    <div class="input input-submit">
+                        <a href="index.php">Voltar</a>
+                    </div>
                     <div style="text-align:center" id="error">
                         <?php session_start(); ?>
                         <?php if (isset($_SESSION['errors'])):?>

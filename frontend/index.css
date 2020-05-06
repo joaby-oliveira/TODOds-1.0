@@ -24,7 +24,7 @@ div.top-bg{
 }
 img#logo{
     width: 200px;
-    margin-bottom: -100px;
+    margin: 10px;
 }
 img#background{
     width: 165px;
@@ -120,7 +120,7 @@ h4{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: rgb(255, 255, 255);

@@ -39,24 +39,5 @@
             <h4><a href="register.php">Criar uma</a></h4>
         </div>
     </div>
-    <nav class="img-txt">
-        <ul>
-            <a href="">
-                <li>
-                    <i class="fas fa-book fa-2x"></i>
-                </li>
-            </a>
-            <a href="">
-                <li>
-                    <i class="fas fa-home fa-2x"></i>
-                </li>
-            </a>
-            <a href="">
-                <li>
-                    <i class="fas fa-address-card fa-2x"></i>
-                </li>
-            </a>
-        </ul>
-    </nav>
 </body>
 </html>
