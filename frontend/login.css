@@ -63,3 +63,9 @@ div.input-submit{
     display: flex;
     justify-content: center;
 }
+a{
+    margin-top: 10px;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    color: black;
+}

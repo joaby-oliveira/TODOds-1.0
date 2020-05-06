@@ -14,7 +14,7 @@
 
 <body>
     <form class="register" action="backend/register.php" method="post">
-        <h1>Faça seu registro</h1>
+        <!--<h1>Faça seu registro</h1>-->
         <img src="photos/TODOds-transparente.png" alt="paunocudojoaby">
         
         <div class="input-container">
@@ -41,8 +41,8 @@
             <i class="fas fa-key"></i>
             <input class="input-field" type="password" name="password" placeholder="Senha">
         </div>
-
         <button type="submit" class="submit-btn">Registrar</button>
+        <a href="index.php">Voltar</a>
     </form>
 </body>
 
