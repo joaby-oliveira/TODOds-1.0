@@ -24,7 +24,7 @@ div.top-bg{
 }
 img#logo{
     width: 200px;
-    margin: 10px;
+    margin: 40px;
 }
 img#background{
     width: 165px;
@@ -108,7 +108,16 @@ h3{
 }
 h4{
     margin: 0;
-    color: #4E70E1;
+}
+h4 > a {
+    color: #FFFCFC;
+    font-weight: 100;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+h4 > a:hover {
+    color: black;
 }
 .container{
     height: 100vh;

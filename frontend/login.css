@@ -65,9 +65,15 @@ div.input-submit{
     display: flex;
     justify-content: center;
 }
-a{
+.back {
     margin-top: 10px;
     font-family: Roboto, sans-serif;
     font-size: 18px;
     color: black;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.back:hover {
+    opacity: 1;
 }

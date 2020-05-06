@@ -42,7 +42,7 @@
             <input class="input-field" type="password" name="password" placeholder="Senha">
         </div>
         <button type="submit" class="submit-btn">Registrar</button>
-        <a href="index.php">Voltar</a>
+        <a class="back" href="index.php">Voltar</a>
     </form>
 </body>
 

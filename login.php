@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faça seu login</title>
     <script src="https://kit.fontawesome.com/1dd3967cff.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="photos/TODOds-transparente.png" type="image/x-icon">
     <link rel="stylesheet" href="frontend/login.css">
 </head>
 <body>
@@ -25,7 +26,7 @@
                         <input onclick="" type="submit" id="submit" name="submit" value="Enviar">
                     </div>
                     <div class="input input-submit">
-                        <a href="index.php">Voltar</a>
+                        <a class="back" href="index.php">Voltar</a>
                     </div>
                     <div style="text-align:center" id="error">
                         <?php session_start(); ?>

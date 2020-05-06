@@ -18,6 +18,7 @@ if(!$_SESSION['userCode']){
 <head>
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/1dd3967cff.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="photos/TODOds-transparente.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -135,7 +136,7 @@ if(!$_SESSION['userCode']){
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
+            position: fixed;
             bottom: 0;
             width: 100%;
             background-color: rgb(55, 10, 30);

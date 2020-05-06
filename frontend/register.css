@@ -2,11 +2,16 @@
     box-sizing: border-box;
 }
 
-a{
+.back {
     margin-top: 10px;
     font-family: Roboto, sans-serif;
     font-size: 18px;
     color: white;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: black;
 }
 
 body {

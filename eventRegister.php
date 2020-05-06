@@ -3,6 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/1dd3967cff.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="photos/TODOds-transparente.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
