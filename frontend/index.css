@@ -24,7 +24,7 @@ div.top-bg{
 }
 img#logo{
     width: 200px;
-    margin: 40px;
+    margin: 10px;
 }
 img#background{
     width: 165px;
@@ -78,7 +78,6 @@ div.bottom{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 a#login{
     margin: 40px 10px 10px 10px;
@@ -108,16 +107,7 @@ h3{
 }
 h4{
     margin: 0;
-}
-h4 > a {
-    color: #FFFCFC;
-    font-weight: 100;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-h4 > a:hover {
-    color: black;
+    color: #4E70E1;
 }
 .container{
     height: 100vh;

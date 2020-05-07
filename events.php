@@ -14,199 +14,35 @@ if(!$_SESSION['userCode']){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/1dd3967cff.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="photos/TODOds-transparente.png" type="image/x-icon">
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="frontend/events.css">
+    <link rel="stylesheet" href="frontend/global.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <style>
-        @media (max-width: 674px) {
-            * {
-                font-size: 0.8rem !important;
-            }
-            h1{
-                font-size: 3rem !important;
-            }
-            .desc{
-                font-weight: 100;
-                font-size: 0.6rem !important;
-            }
-        }
-        *{
-            font-family: Oswald, sans-serif;
-            color: rgb(245, 255, 179);
-            font-size: 25px;
-            text-align: center;
-        }
-        .container{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        body{
-            background: linear-gradient(180deg, #101B3F 0%, #A31831 100%);
-            padding: 0;
-            margin: 0;
-        }
-        table{
-            background-color: #400133;
-            padding: 10px;
-            overflow: scroll;
-        }
-        .tab{
-            border-radius: 5px;
-        }
-        th{
-            box-shadow: 0px 0px 5px black;
-            background-color: rgb(212, 65, 92);
-            color: rgb(0, 0, 0);
-            border: 1px solid black;
-            border-radius: 5px;
-            transition: ease-in-out 0.1s;
-        }
-        td{
-            background-color: rgb(163, 24, 49);
-            border: 1px solid black;
-            margin: 10px;
-            border-radius: 5px;
-            font-weight: 100;
-        }
-        h1{
-            font-size: 3rem;
-            text-align: center;
-            color: rgb(214, 34, 34);
-            margin-bottom: 0;
-            margin-top: 0;
-            padding-bottom: 0;
-        }
-        h4{
-            font-weight: 100;
-            text-align: center;
-            color: #FFF;
-            margin-top: 0;
-        }
-        hr{
-            margin-top: 0;
-        }
-        td{
-            word-wrap: break-word;
-            transition: ease-in-out 0.6s;
-        }
-        td.desc{
-            font-size: 0.6rem;
-        }
-        .necessary{
-            color: black;
-            background-color: rgb(230, 182, 50) !important;
-        }
-        .unnecessary{
-            background-color: rgb(77, 216, 84) !important;
-            color: black;
-        }
-        th:hover{
-            background-color: rgb(110, 0, 20);
-        }
-        img{
-            margin-top: 8px;
-            border-radius: 5px;
-            transition: ease-in-out 0.3s;
-            max-width: 250px;
-        }
-        a img:hover{
-            transform: scale(1.1);
-        }
-        .desc{
-            font-size: 1rem !important;
-        }
-        td:hover{
-            color: rgb(255, 255, 255);
-        }
 
-        .p td{
-            background-color: rgb(133, 19, 40);
-        }
-        h2{
-            color: rgb(245, 255, 179);
-            font-weight: 100;
-        }
-        
-        .img-txt{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: rgb(55, 10, 30);
-            padding: 10px 0;
-            border-bottom: 2px solid white;
-        }
-        ul{
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        li{
-            list-style: none;
-        }
-        i{
-            color: rgb(255, 255, 255);
-            transition: 0.2s ease;
-        }
-        i:hover{
-            transform:scale(1.1);
-        }
-        .menu{
-            width: 32%;
-            height: calc(100vh - 73px);
-            display: none;
-            position: fixed;
-            top: 0;
-            right: 0;
-            background: black;
-            transition: ease 0.4s;
-            display: flex;
-            justify-content: center;
-        }
-        .menu a{
-            height: 40px;
-            width: 100%;
-            text-decoration: none;
-            padding: 10px;
-            background: red;
-            border-radius: 10px;
-        }
-        table{
-            margin: 10px;
-            box-shadow: 0px 0px 20px black;
-            border-radius: 10px;
-        }
-        td{
-            width: 25% !important;
-            overflow: hidden;
-            
-        }
     </style>
     <title>TODOds</title>
 </head>
-<body>
-    <?php
+<body class="fadeIn">
+    <header>
+        </header>
+        <?php
         include_once 'backend/connect.php';
         $query = "SELECT date, subject, link, description FROM events ORDER BY date ASC";
         $result = mysqli_query($connection, $query);
-//        $register = [];
-    ?>
+        //        $register = [];
+        ?>
     <div class="container">
         <header>
-            <h1>TODOds</h1>
-            <h4>O sistema que você pediu ao papai noel</h4>
+            <h1 class="gradient-text no-select">TODOds</h1>
+            <h4 class="no-select">O sistema que você pediu ao papai noel</h4>
             <hr style="width: 140px;">
-            <h2><?php echo "Seja bem-vindo " . $_SESSION['firstname']; ?></h2>
+            <h2 class="no-select"><?php echo "Seja bem-vindo " . $_SESSION['firstname']; ?></h2>
         </header>
         <table>
             <thead>
@@ -221,15 +57,15 @@ if(!$_SESSION['userCode']){
                     <td><?php echo $row['subject']; ?></td>
                     <td><?php echo $row['description']; ?></td>
                     <td><?php if(empty($row['link']))
-                    { echo "Nenhum link encontrado";}
-                    else{ echo "<a href=". $row['link'] .">ACESSAR</a>";} ?></td>
+                    { echo "<a class='no-access'>ACESSAR</a>";}
+                    else{ echo "<a href=". $row['link'] ." class='access'>ACESSAR</a>";} ?></td>
                     <td><?php echo $row['date']; ?></td>
                 </tr>
             <?php endwhile ?>
             
             </tbody>
         </table>
-        <nav class="img-txt">
+        <nav class="img-txt" onmouseleave="hide()">
             <ul>
                 <a href="eventRegister.php">
                     <li>
@@ -243,24 +79,27 @@ if(!$_SESSION['userCode']){
                 </a>
                 <a href="">
                     <li>
-                        <i class="fas fa-address-card fa-2x" onmouseover="a()"></i>
+                        <i class="fas fa-address-card fa-2x" onmouseover="show()"></i>
                     </li>
                 </a>
             </ul>
+            <div class="menu fadeIn" id="menu" onmouseleave="hide()">
+                <a href="backend/profile.php" >
+                    <?php echo $_SESSION['firstname']?>
+                </a>
+                <a href="backend/logout.php" >
+                    Sair
+                </a>
+            </div>
         </nav>
-        <div class="menu" id="menu" onmouseleave="b()">
-            <a href="backend/logout.php" >
-                Sair
-            </a>
-        </div>
         <script>
             var menu;
             menu = document.getElementById("menu");
             menu.style.display="none";
-            function a(){
+            function show(){
                 menu.style.display="flex";
             }
-            function b(){
+            function hide(){
                 menu.style.display="none";
             }
         </script>

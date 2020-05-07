@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
-    <script src="https://kit.fontawesome.com/1dd3967cff.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="photos/TODOds-transparente.png" type="image/x-icon">
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="frontend/eventRegister.css">
+    <link rel="stylesheet" href="frontend/global.css">
+    <script src="https://kit.fontawesome.com/1dd3967cff.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <style>
     /*
         div.insert{
@@ -128,140 +130,29 @@
             display: block;
         } */
 
-        body{
-            height: calc(100vh - 40px);
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 0;
-        }
-        *{
-            font-family: Oswald, sans-serif;
-            /*color: rgb(20, 20, 20);*/
-            font-size: 25px;
-            text-align: center;
-        }
-        div.insert{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        form{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.40);
-            border-radius: 20px;
-            border: solid white 2px;
-        }
-        input, input.button{
-            width: 200px;
-            height: 30px !important;
-            margin: 1px;
-            padding: 0;
-            border: solid gray 1px;
-            border-radius: 3px;
-        }
-        div.button{
-            display: flex;
-            align-items: flex-end;
-        }
-        input.button{
-            height: 40px !important;
-            width: 204px;
-            background: gray;
-        }
-        h1{
-            font-size: 3rem;
-            color: rgb(214, 34, 34);
-            margin-bottom: 0;
-            margin-top: 0;
-            padding-bottom: 0;
-        }
-        h4{
-            font-weight: 100;
-            margin-top: 0;
-        }
-        h2 {
-            color: rgb(245, 255, 179);
-            font-weight: 100;
-            margin: 20px;
-        }
-        form p{
-            color: palegoldenrod;
-            margin: 0;
-        }
-        a{
-            text-decoration: none;
-            color: black;
-        }
-        body{
-            background: linear-gradient(180deg, #101B3F 0%, #A31831 100%);
-        }
-
-        .img-txt{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background-color: rgb(55, 10, 30);
-            padding: 10px 0;
-            border-bottom: 2px solid white;
-        }
-        ul{
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        li{
-            list-style: none;
-        }
-        i{
-            color: rgb(255, 255, 255);
-            transition: 0.2s ease;
-        }
-        i:hover{
-            transform:scale(1.1);
-        }
-        .menu{
-            width: 20%;
-            height: calc(100vh - 73px);
-            display: none;
-            position: absolute;
-            background: black;
-            top: 0;
-            right: 0;
-            transition: ease 0.4s;
-            display: flex;
-            justify-content: center;
-        }
-        .menu a{
-            height: 40px;
-            width: 100%;
-            text-decoration: none;
-            padding: 10px;
-            background: red;
-            border-radius: 10px;
-        }
-        
         </style>
     <title>TODOds</title>
 </head>
 <body>
+<?php
+
+session_start();
+
+if(!$_SESSION['userCode']){
+    echo 
+    "<script>
+            alert('Você não tem permissão a esta página');
+        
+        window.location.href = 'index.php';
+    </script>";
+}
+
+?>
     <div class="container">
         <h1>TODOds</h1>
         <h4>O sistema que você pediu ao papai noel</h4>
         <hr style="width: 140px;">
-        <h2>Adcionar tarefas</h2>
+        <h2>Adicionar tarefas</h2>
         <form action="backend/insert.php" method="post">
             <div class="insert">
                 <div class="day">
@@ -288,12 +179,10 @@
                     <input style="width:110px" type="file" name="file">
                 </div>      -->
             </div>
-            <div class="button">
                 <input type="submit" value="Enviar" class="button">
-            </div>
         </form>
     </div>
-    <nav class="img-txt">
+    <nav class="img-txt" onmouseleave="hide()">
             <ul>
                 <a href="eventRegister.php">
                     <li>
@@ -305,29 +194,33 @@
                         <i class="fas fa-home fa-2x"></i>
                     </li>
                 </a>
-                <a href="">
+                <a>
                     <li>
-                        <i class="fas fa-address-card fa-2x" onmouseover="a()"></i>
+                        <i class="fas fa-address-card fa-2x" onmouseover="show()"></i>
                     </li>
                 </a>
             </ul>
+            <div class="menu fadeIn" id="menu" onmouseleave="hide()">
+                <a href="backend/profile.php" >
+                    <?php echo $_SESSION['firstname']?>
+                </a>
+                <a href="backend/logout.php" >
+                    Sair
+                </a>
+            </div>
         </nav>
-        <div class="menu" id="menu" onmouseleave="b()">
-            <a href="backend/logout.php" >
-                Sair
-            </a>
-        </div>
         <script>
             var menu;
             menu = document.getElementById("menu");
             menu.style.display="none";
-            function a(){
+            function show(){
                 menu.style.display="flex";
             }
-            function b(){
+            function hide(){
                 menu.style.display="none";
             }
         </script>
+<!--        <table cl
     <!--<footer>
         <h4>Desenvolvido por <a href="https://github.com/joaby-oliveira">Joaby Oliveira</a> e <a href="https://github.com/GabrielRagonhaRodrigues">Gabriel Rodrigues</a></h4>
         <h5>Todos direitos reservados &copy</h5>

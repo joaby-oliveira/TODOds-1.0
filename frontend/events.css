@@ -1,0 +1,122 @@
+@media (max-width: 674px) {
+    * {
+        font-size: 0.8rem !important;
+    }
+    h1{
+        font-size: 3rem !important;
+    }
+    .desc{
+        font-weight: 100;
+        font-size: 0.6rem !important;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(180deg, #101B3F 0%, #A31831 100%);
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom:100px;
+}
+
+table {
+    background-color: #400133;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 20px black;
+    border-radius: 10px;
+}
+
+th{
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(212, 65, 92);
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px black;
+    transition: ease-in-out 0.3s;
+}
+th:hover{
+    background-color: rgb(110, 0, 20);
+}
+
+td{
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 100;
+    background-color: rgb(163, 24, 49);
+    border: 1px solid black;
+    word-wrap: break-word;
+    transition: ease-in-out 0.6s;
+    overflow: hidden;   
+    font-size: 20px;
+    max-width: 650px;
+}
+
+td a{
+    border-radius: 10px;
+    padding: 6px;
+    margin-bottom: 4px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 15px !important;
+}
+td a.access{
+    background: rgb(99, 207, 66);
+    transition: ease 0.2s;
+}
+td a:hover{
+    box-shadow: inset 0 0 10px rgb(104, 104, 104);
+    transform: scale(1.1);
+}
+td a.no-access{
+    background: rgb(180, 180, 180);
+    cursor: not-allowed;
+}
+td:hover{
+    color: rgb(148, 153, 153);
+}
+
+
+/*
+TEXTS
+*/
+*{
+    font-family: Oswald, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+}
+
+.p td{
+    background-color: rgb(133, 19, 40);
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(214, 34, 34);
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    color: rgb(245, 255, 179);
+    font-weight: 100;
+}
+
+h4{
+    font-weight: 100;
+    text-align: center;
+    color: #FFF;
+    margin-top: 0;
+}
+
