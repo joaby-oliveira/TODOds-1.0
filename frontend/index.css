@@ -105,9 +105,17 @@ h3{
     font-weight: 100;
     color: #FFFCFC;
 }
-h4{
-    margin: 0;
-    color: #4E70E1;
+h4 > a{
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    opacity: 0.9;
+    transition: 0.2s;
+}
+
+h4 > a:hover {
+    color: black;
+    opacity: 1;
 }
 .container{
     height: 100vh;
