@@ -58,7 +58,7 @@ if(!$_SESSION['userCode']){
                     <td><?php echo $row['description']; ?></td>
                     <td><?php if(empty($row['link']))
                     { echo "<a class='no-access'>ACESSAR</a>";}
-                    else{ echo "<a href=". $row['link'] ." class='access'>ACESSAR</a>";} ?></td>
+                    else{ echo "<a href=". $row['link'] ." class='access' target='_blank'>ACESSAR</a>";} ?></td>
                     <td><?php echo $row['date']; ?></td>
                 </tr>
             <?php endwhile ?>
