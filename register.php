@@ -13,36 +13,59 @@
 </head>
 
 <body>
-    <form class="register" action="backend/register.php" method="post">
+    <form name="register" class="register" action="backend/register.php" method="post">
         <!--<h1>Faça seu registro</h1>-->
-        <img src="photos/TODOds-transparente.png" alt="paunocudojoaby">
-        
-        <div class="input-container">
-            <i class="far fa-user-circle"></i>
-            <input class="input-field" type="text" name="first" placeholder="Nome">
+        <img src="photos/TODOds-transparente.png" alt="logo-img">
+
+        <div class="container-input-container">
+            <div class="input-container">
+                <i class="far fa-user-circle"></i>
+                <div class="label-input-container">
+                    <label for="name">Nome</label>
+                    <input id="name" class="input-field" type="text" name="first" placeholder='"João"'>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <i class="far fa-user-circle"></i>
+                <div class="label-input-container">
+                    <label for="lastname">Sobrenome</label>
+                    <input id="lastname" class="input-field" type="text" name="last" placeholder='"Paulo"'>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <i class="fas fa-venus-mars"></i>
+                <div class="label-input-container">
+                    <label for="gender">Gênero</label>
+                    <select id="gender" class="input-field">
+                        <option value="default" class="input-field">Selecione um gênero</option>
+                        <option value="M" class="input-field">Masculino</option>
+                        <option value="F" class="input-field">Feminino</option>
+                        <option value="O" class="input-field">Outro</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <i class="far fa-envelope"></i>
+                <div class="label-input-container">
+                    <label for="email">Email</label>
+                    <input class="input-field" type="text" name="email" placeholder="abc@email.com">
+                </div>
+            </div>
+
+            <div class="input-container">
+                <i class="fas fa-key"></i>
+                <div class="label-input-container">
+                    <label for="password">Senha</label>
+                    <input id="password" class="input-field" type="password" name="password" placeholder="**********">
+                </div>
+            </div>
         </div>
 
-        <div class="input-container">
-            <i class="far fa-user-circle"></i>
-            <input class="input-field" type="text" name="last" placeholder="Sobrenome">
-        </div>
-
-        <div class="input-container">
-            <i class="fas fa-venus-mars"></i>
-            <input class="input-field" type="text" name="gender" placeholder="Gênero">
-        </div>
-
-        <div class="input-container">
-            <i class="far fa-envelope"></i>
-            <input class="input-field" type="text" name="email" placeholder="Email">
-        </div>
-
-        <div class="input-container">
-            <i class="fas fa-key"></i>
-            <input class="input-field" type="password" name="password" placeholder="Senha">
-        </div>
-        <button type="submit" class="submit-btn">Registrar</button>
-        <a class="back" href="index.php">Voltar</a>
+            <button type="submit" class="submit-btn">Registrar</button>
+            <a class="back" href="index.php">Voltar</a>
     </form>
 </body>
 
