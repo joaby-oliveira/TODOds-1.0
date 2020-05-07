@@ -133,7 +133,7 @@
         </style>
     <title>TODOds</title>
 </head>
-<body>
+<body class="fadeIn">
 <?php
 
 session_start();
