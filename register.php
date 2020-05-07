@@ -22,7 +22,7 @@
                 <i class="far fa-user-circle"></i>
                 <div class="label-input-container">
                     <label for="name">Nome</label>
-                    <input id="name" class="input-field" type="text" name="first" placeholder='"João"'>
+                    <input id="name" class="input-field" type="text" name="first" placeholder="Ex: João">
                 </div>
             </div>
 
@@ -30,7 +30,7 @@
                 <i class="far fa-user-circle"></i>
                 <div class="label-input-container">
                     <label for="lastname">Sobrenome</label>
-                    <input id="lastname" class="input-field" type="text" name="last" placeholder='"Paulo"'>
+                    <input id="lastname" class="input-field" type="text" name="last" placeholder="Ex: Silva Santos">
                 </div>
             </div>
 
