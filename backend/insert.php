@@ -12,6 +12,9 @@ $description = $_POST["description"];
 $status = $_POST["status"];
 $team = $_POST["team"];
 $link = $_POST["link"];
+
+$preDate1 = explode('/', $date);
+$preDate2 = implode('-', array_reverse($preDate1));
 $sql = "INSERT INTO events(date, subject, link, description, status, team, classCode)
 VALUES (
     '$date',
@@ -24,10 +27,9 @@ VALUES (
 )";
 $result = mysqli_query($connection, $sql);
 if($result){
-    header ('Location: ../eventRegister.php');
+    //header ('Location: ../eventRegister.php');
 }else{
-    // echo "Erro: ". mysqli_connect_error($connection);
-    print_r($sql);
+    print_r ("$preDate2");
 }
 
 ?>

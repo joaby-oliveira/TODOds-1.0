@@ -12,27 +12,35 @@
     <div class="container">
         <form id="form" name="form" action="backend/auth.php" method="POST">
             <div class="box">
-                <i class="fas fa-user fa-7x"></i>
+                <img src="photos/TODOds-transparente.png" alt="logo-img">
                 <div class="input-box">
-                    <div class="input input-email">
-                        <p>Email</p>
-                        <input type="email" id="email" name="email" placeholder="abc@email.com">
-                    </div>
-                    <div class="input input-password">
-                        <p>Senha</p>
-                        <input type="password" id="password" name="password" placeholder="********">
+                    <div class="input-field">
+                        <i class="far fa-user-circle"></i>
+                        <div class="input input-email">
+                            <p>Email</p>
+                            <input type="email" id="email" name="email" placeholder="abc@email.com">
+                        </div>
+                    </div>    
+                    <div class="input-field">
+                        <i class="fas fa-key"></i>
+                        <div class="input input-password">
+                            <p>Senha</p>
+                            <input type="password" id="password" name="password" placeholder="********">
+                        </div>
                     </div>
                     <div class="input input-submit">
-                        <input onclick="" type="submit" id="submit" name="submit" value="Enviar">
+                        <input onclick="" type="submit" id="submit" name="submit" value="Entrar">
                     </div>
                     <div class="input input-submit">
                         <a class="back" href="index.php">Voltar</a>
                     </div>
                     <div style="text-align:center" id="error">
-                        <?php session_start(); ?>
-                        <?php if (isset($_SESSION['errors'])):?>
-                            <?php print_r($_SESSION['errors']);?>
-                        <?php endif ?>
+                        <?php
+                        session_start();
+                        if (isset($_SESSION['errors'])){
+                            print_r($_SESSION['errors']);
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -73,7 +81,6 @@
                 console.log('Logado com sucesso!');
                 e.preventDefault();
                 errorElement.innerText = messages.join('\n ');
-                alert("Erro de login");
             } 
 
         });

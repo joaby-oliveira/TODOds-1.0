@@ -1,8 +1,25 @@
+@media screen and (max-width: 900px){
+    div.container div.middle{
+        flex-direction: column;
+    }
+    img#logo.photo{
+        width: 100px;
+    }
+    div div.box{
+        width: 100%;
+    }
+    a li i.fas{
+        font-size: 20px;
+    }
+}
 *{
     font-family: 'Oswald', sans-serif;
 }
+html{
+    height: 100%;
+}
 body{
-    height: 100vh;
+    height: 100%;
     padding: 0;
     margin: 0;
     display: flex;
@@ -24,7 +41,7 @@ div.top-bg{
 }
 img#logo{
     width: 200px;
-    margin: 10px;
+    margin: 40px;
 }
 img#background{
     width: 165px;
@@ -80,8 +97,6 @@ div.bottom{
     align-items: center;
 }
 a#login{
-    margin: 40px 10px 10px 10px;
-    display: block;
     border-radius: 5px;
     width: 150px;
     height: 40px;
@@ -118,38 +133,9 @@ h4 > a:hover {
     opacity: 1;
 }
 .container{
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-.img-txt{
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    background: rgba(7, 10, 20);
-    padding: 10px 0;
-    border-bottom: 2px solid white;
-}
-ul{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-li{
-    list-style: none;
-}
-i{
-    color: rgb(255, 255, 255);
-    transition: 0.2s ease;
-}
-i:hover{
-    transform:scale(1.1);
 }

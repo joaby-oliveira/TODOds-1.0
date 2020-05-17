@@ -1,13 +1,13 @@
-@media (max-width: 674px) {
-    * {
-        font-size: 0.8rem !important;
-    }
-    h1{
-        font-size: 3rem !important;
-    }
+@media only screen and (max-width: 820px) {
     .desc{
-        font-weight: 100;
+        font-weight: 300;
         font-size: 0.6rem !important;
+    }
+    div td{
+        max-width: 100px;
+    }
+    div td a.access, a.no-access{
+        font-size: 10px !important;
     }
 }
 
@@ -34,8 +34,11 @@ table {
     margin: 10px;
     box-shadow: 0px 0px 20px black;
     border-radius: 10px;
+    width: 100%;
 }
-
+td, th{
+    font-size: 16px;
+}
 th{
     border-radius: 5px;
     color: rgb(0, 0, 0);
@@ -56,9 +59,12 @@ td{
     border: 1px solid black;
     word-wrap: break-word;
     transition: ease-in-out 0.6s;
-    overflow: hidden;   
-    font-size: 20px;
-    max-width: 450px !important;
+    overflow: hidden;
+    max-width: 500px;
+}
+
+td:last-child{
+    width: 90px;
 }
 
 td a{
@@ -92,20 +98,11 @@ TEXTS
 *{
     font-family: Oswald, sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 25px;
     text-align: center;
 }
 
 .p td{
     background-color: rgb(133, 19, 40);
-}
-
-h1{
-    font-size: 3rem;
-    text-align: center;
-    color: rgb(214, 34, 34);
-    margin: 0;
-    padding: 0;
 }
 
 h2{

@@ -1,18 +1,29 @@
+@media screen and (max-width: 960px){
+    form div.insert{
+        flex-direction: column !important;
+    }
+    html body{
+        margin: 20px;
+        padding-bottom: 20px;
+        height: calc(120vh);
+    }
+}
 *{
     font-family: Oswald, sans-serif;
-    font-size: 25px;
     text-align: center;
 }
-
+html{
+    margin: 0;
+}
 body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
     background: linear-gradient(180deg, #101B3F 0%, #A31831 100%);
-    height: calc(100vh - 40px);
+    height: calc(100vh);
 }
 
 div.insert{
@@ -47,7 +58,6 @@ input, input.button{
 }
 
 input.button{
-    border: none;
     background: #A31831;
     color: white;
     margin-top: 15px;
@@ -56,13 +66,6 @@ input.button{
 }
 input.button:hover{
     transform: scale(1.1);
-}
-h1{
-    font-size: 3rem;
-    color: rgb(214, 34, 34);
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-bottom: 0;
 }
 h4{
     font-weight: 100;

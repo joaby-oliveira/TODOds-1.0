@@ -46,10 +46,12 @@ if(!$_SESSION['userCode']){
         </header>
         <table>
             <thead>
-                <th>Matéria</th>
-                <th>Descrição</th>
-                <th>Link</th>
-                <th>Prazo</th>
+                <tr>
+                    <th>Matéria</th>
+                    <th>Descrição</th>
+                    <th>Link</th>
+                    <th>Prazo</th>
+                </tr>
             </thead>
             <tbody>
             <?php while($row = mysqli_fetch_assoc($result)):?>

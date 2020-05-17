@@ -149,7 +149,7 @@ if(!$_SESSION['userCode']){
 
 ?>
     <div class="container">
-        <h1>TODOds</h1>
+        <h1 class="gradient-text">TODOds</h1>
         <h4>O sistema que você pediu ao papai noel</h4>
         <hr style="width: 140px;">
         <h2>Adicionar tarefas</h2>
@@ -157,7 +157,7 @@ if(!$_SESSION['userCode']){
             <div class="insert">
                 <div class="day">
                     <p>DATA</p>
-                    <input type="text" name="date">
+                    <input type="date" name="date">
                 </div>
                 <div class="subject">
                     <p>MATÉRIA</p>
@@ -196,7 +196,7 @@ if(!$_SESSION['userCode']){
                 </a>
                 <a>
                     <li>
-                        <i class="fas fa-address-card fa-2x" onmouseover="show()"></i>
+                        <i class="fas fa-address-card fa-2x" onmouseover="show()" onclick="()";></i>
                     </li>
                 </a>
             </ul>

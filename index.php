@@ -10,8 +10,8 @@
     <title>TODOds</title>
 </head>
 <body>
-    <img id="logo" src="photos/TODOds-transparente.png" alt="site logo">
     <div class="container">
+        <img id="logo" class="photo" src="photos/TODOds-transparente.png" alt="site logo">
         <div class="middle">
             <div class="box">
                 <img src="photos/lua.svg" alt="moon">
