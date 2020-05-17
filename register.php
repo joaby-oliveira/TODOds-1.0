@@ -74,7 +74,7 @@
             }
         ?>
         </div>
-        <input type="submit" name="submit" class="submit-btn">
+        <input type="submit" name="submit" class="submit-btn" value="Cadastrar">
         <a class="back" href="index.php">Voltar</a>
     </form>
     <script>
