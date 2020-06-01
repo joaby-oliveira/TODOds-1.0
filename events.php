@@ -33,9 +33,18 @@ if(!$_SESSION['userCode']){
         </header>
         <?php
         include_once 'backend/connect.php';
+        //Which week day
+        $weekDay = array('Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado');
+        $date = date('Y-m-d');
+        $numberWeekDay = date('w', strtotime($date));
+
         $query = "SELECT date, subject, link, description FROM events ORDER BY date ASC";
         $result = mysqli_query($connection, $query);
-        //        $register = [];
+        $queryClasses = "SELECT aulaDia, aulaProfessor, aulaNome, aulaHorario, aulaTurma FROM aulas WHERE aulaDia LIKE '%$weekDay[$numberWeekDay]%'";
+        $resultClasses = mysqli_query($connection, $queryClasses);
+        
+
+        
         ?>
     <div class="container">
         <header>
@@ -64,7 +73,29 @@ if(!$_SESSION['userCode']){
                     <td><?php echo $row['date']; ?></td>
                 </tr>
             <?php endwhile ?>
-            
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+            <?php $row = mysqli_fetch_assoc($resultClasses)?>
+                <tr class="classDay">
+                    <?php echo $row['aulaDia']; ?>
+                    <th>Matéria</th>
+                    <th>Professor</th>
+                    <th>Horário</th>
+                    <th>Turma</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php while($row = mysqli_fetch_assoc($resultClasses)):?>
+                <tr>
+                    <td><?php echo $row['aulaNome']; ?></td>
+                    <td><?php echo $row['aulaProfessor']; ?></td>
+                    <td><?php echo $row['aulaHorario']; ?></td>
+                    <td><?php echo $row['aulaTurma']; ?></td>
+                </tr>
+            <?php endwhile ?>
             </tbody>
         </table>
         <nav class="img-txt" onmouseleave="hide()">
