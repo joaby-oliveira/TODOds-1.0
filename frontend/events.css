@@ -87,6 +87,10 @@ td a.no-access{
     background: rgb(180, 180, 180);
     cursor: not-allowed;
 }
+a.delete{
+    background: rgb(0, 0, 0) !important;
+    transition: ease 0.2s;
+}
 td:hover{
     color: rgb(148, 153, 153);
 }

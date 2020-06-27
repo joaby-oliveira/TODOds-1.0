@@ -38,7 +38,7 @@ if(!$_SESSION['userCode']){
         $date = date('Y-m-d');
         $numberWeekDay = date('w', strtotime($date));
 
-        $query = "SELECT date, subject, link, description FROM events ORDER BY date ASC";
+        $query = "SELECT eventCode, date, subject, link, description FROM events ORDER BY date ASC";
         $result = mysqli_query($connection, $query);
         $queryClasses = "SELECT aulaDia, aulaProfessor, aulaNome, aulaHorario, aulaTurma FROM aulas WHERE aulaDia LIKE '%$weekDay[$numberWeekDay]%'";
         $resultClasses = mysqli_query($connection, $queryClasses);
@@ -59,6 +59,7 @@ if(!$_SESSION['userCode']){
                     <th>Matéria</th>
                     <th>Descrição</th>
                     <th>Link</th>
+                    <th>Excluir</th>
                     <th>Prazo</th>
                 </tr>
             </thead>
@@ -66,21 +67,25 @@ if(!$_SESSION['userCode']){
             <?php while($row = mysqli_fetch_assoc($result)):?>
                 <tr>
                     <td><?php echo $row['subject']; ?></td>
-                    <td><?php echo $row['description']; ?></td>
+                    <td><?php echo $row['description'];
+                    $row['description'] ?></td>
                     <td><?php if(empty($row['link']))
                     { echo "<a class='no-access'>ACESSAR</a>";}
                     else{ echo "<a href=". $row['link'] ." class='access' target='_blank'>ACESSAR</a>";} ?></td>
+                    <td><a class="delete" href="?delete=<?= $row['eventCode'] ?>">EXCLUIR</a></td>
                     <td><?php echo $row['date']; ?></td>
                 </tr>
             <?php endwhile ?>
             </tbody>
         </table>
-
+        
+<!--
         <table>
             <thead>
             <?php $row = mysqli_fetch_assoc($resultClasses)?>
                 <tr class="classDay">
-                    <?php echo $row['aulaDia']; ?>
+                    <?php 
+                    if($row != null){echo $row['aulaDia'];} ?>
                     <th>Matéria</th>
                     <th>Professor</th>
                     <th>Horário</th>
@@ -98,6 +103,7 @@ if(!$_SESSION['userCode']){
             <?php endwhile ?>
             </tbody>
         </table>
+         -->
         <nav class="img-txt" onmouseleave="hide()">
             <ul>
                 <a href="eventRegister.php">
@@ -136,6 +142,17 @@ if(!$_SESSION['userCode']){
                 menu.style.display="none";
             }
         </script>
+        <?php
+            if(isset($_GET['delete'])){
+                $id = $_GET['delete'];
+                $sql = "DELETE FROM events WHERE eventCode = $id";
+                if(mysqli_query($connection, $sql)){
+                    $query = "SELECT subject, description FROM events WHERE id='$id';";
+                    echo "Dado apagado com sucesso!";
+                }
+            }
+
+        ?>
 <!--        <table class="tab">
             <caption>TABELA DE AULAS</caption>
             <thead>

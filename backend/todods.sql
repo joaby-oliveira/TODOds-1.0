@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS aulas (
     aulaNome VARCHAR(80) NULL,
     aulaHorario VARCHAR(80) NULL,
     aulaTurma SET('A', 'B') NOT NULL
-)
+);
 
 INSERT INTO aulas (aulaDia, aulaNome, aulaProfessor, aulaHorario, aulaTurma)
 VALUES
@@ -136,5 +136,6 @@ VALUES
 
 CREATE TABLE IF NOT EXISTS todo (
   todoCode INT UNSIGNED AUTO_ICREMENT PRIMARY KEY,
-  title VARCHAR
+  title VARCHAR(250) NOT NULL,
+  userCode INT NOT NULLUNSIGNED 
 );
